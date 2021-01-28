@@ -10,13 +10,11 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".env" CopyToOutputDirectory="PreserveNewest" />
     <Compile Include="StringUtilsTest.fs" />
     <Compile Include="ParserTest.fs" />
     <Compile Include="ConfigTest.fs" /> 
     <Compile Include="Program.fs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Update=".env" CopyToOutputDirectory="Always" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\DotEnvSharp\DotEnvSharp.fsproj" />
