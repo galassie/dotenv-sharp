@@ -12,7 +12,11 @@
   <ItemGroup>
     <Compile Include="StringUtilsTest.fs" />
     <Compile Include="ParserTest.fs" />
+    <Compile Include="ConfigTest.fs" /> 
     <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update=".env" CopyToOutputDirectory="Always" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\DotEnvSharp\DotEnvSharp.fsproj" />
