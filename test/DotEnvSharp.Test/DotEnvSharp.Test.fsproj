@@ -12,6 +12,7 @@
   <ItemGroup>
     <Content Include=".env" CopyToOutputDirectory="PreserveNewest" />
     <Content Include=".altenv" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include=".latinenv" CopyToOutputDirectory="PreserveNewest" />
     <Compile Include="StringUtilsTest.fs" />
     <Compile Include="ParserTest.fs" />
     <Compile Include="ConfigTest.fs" /> 
