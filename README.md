@@ -1,5 +1,21 @@
 # DotEnvSharp
 
+## Build on your machine
+
+If you want to build this library on your machine, execute the following commands:
+
+``` shell
+git clone https://github.com/galassie/dotenv-sharp.git
+cd dotenv-sharp
+dotnet build
+```
+
+If you want to run the tests, execute the following command:
+
+``` shell
+dotnet test
+```
+
 ## Contributing
 
 Code contributions are more than welcome! 😻
