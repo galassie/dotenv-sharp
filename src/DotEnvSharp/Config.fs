@@ -26,4 +26,4 @@ module DotEnvSharp.Config
             for (key, value) in elements do Environment.SetEnvironmentVariable(key, value)
             Ok elements
         with
-            | ex -> printfn "Exception! %s " (ex.Message); Error ex.Message
+            | ex -> Error ex

@@ -2,6 +2,7 @@ module DotEnvSharp.Config.Test
 
 open System
 open System.Text
+open System.IO
 open DotEnvSharp.Config
 open NUnit.Framework
 
@@ -44,3 +45,11 @@ let ``config with different file encoding option should configure properly the e
     Assert.AreEqual("VAL1", Environment.GetEnvironmentVariable("KEY1"))
     Assert.AreEqual("Val2", Environment.GetEnvironmentVariable("Key2"))
     Assert.AreEqual("value3", Environment.GetEnvironmentVariable("key3"))
+
+[<Test>]
+let ``config if file is not found should return error with proper exception`` () =
+    let result = config { DefaultOptions with FilePath = ".filedonotexist" }
+
+    match result with
+        | Ok _ -> Assert.Fail("Result should be Error!")
+        | Error ex -> Assert.IsInstanceOf(typeof<FileNotFoundException>, ex)
