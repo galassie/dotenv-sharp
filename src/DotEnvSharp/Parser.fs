@@ -25,7 +25,7 @@
 
         split Environment.NewLine source
         |> Array.map trim
-        |> Array.filter isNotNullOrWhiteSpace
+        |> Array.filter (isNullOrWhiteSpace >> not)
         |> Array.filter isNotComment
         |> Array.filter matchLineFormat
         |> Array.map splitKeyValue

@@ -17,7 +17,7 @@ module DotEnvSharp.Config
     /// Configure the current environment with the variables read from the env file
     /// The options arg specify the .env file path and the file encoding
     let config options =
-        let dotenvPath =  if isNotNullOrWhiteSpace options.FilePath then options.FilePath else DefaultOptions.FilePath
+        let dotenvPath = if not (isNullOrWhiteSpace options.FilePath) then options.FilePath else DefaultOptions.FilePath
         let dotenvEncoding = if not (isNull options.Encoding) then options.Encoding else DefaultOptions.Encoding
 
         try 

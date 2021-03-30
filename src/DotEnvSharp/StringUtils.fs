@@ -10,6 +10,3 @@ module StringUtils
 
     let isNullOrWhiteSpace (str : string) =
         String.IsNullOrWhiteSpace(str)
-
-    let isNotNullOrWhiteSpace (str : string) =
-        not (isNullOrWhiteSpace str)
