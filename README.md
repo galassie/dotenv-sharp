@@ -1,5 +1,7 @@
 # DotEnvSharp
 
+[![Build status](https://ci.appveyor.com/api/projects/status/mkf12wmyor682w19?svg=true)](https://ci.appveyor.com/project/galassie/dotenv-sharp)
+
 ## Build on your machine
 
 If you want to build this library on your machine, execute the following commands:
